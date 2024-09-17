@@ -6,7 +6,7 @@ resource "hcp_hvn" "aws_hcp_vault_hvn"  {
 
 resource "hcp_vault_cluster" "aws_hcp_vault_cluster" {
   cluster_id = var.cluster.id
-  hvn_id     = hcp_hvn.aws_hcp_vault_hvn.hvn.id
+  hvn_id     = hcp_hvn.aws_hcp_vault_hvn.hvn_id
   tier       = var.tier
   public_endpoint = true
 }
